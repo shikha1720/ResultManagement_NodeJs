@@ -1,0 +1,20 @@
+<a href="/logout" class="btn btn-warning " style="margin-top:5px;">Logout</a>
+<h2>Welcome</h2>
+<div class="optionDiv">
+    <button type="button" class="btn btn-info">
+        <a class="link" href="/teacher/viewAll">View All Students</a>
+    </button>
+    <button type="button" class="btn btn-info">
+        <a class="link" href="/teacher/add">Add Student</a>
+    </button>
+</div>
+
+<!-- for alert popup-->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script>
+    const messages = '<%= message %>';
+    if (messages == "Logged in Successfully.") {
+        alertify.set('notifier', 'position', 'bottom-center')
+        alertify.success(messages);
+    }
+</script>

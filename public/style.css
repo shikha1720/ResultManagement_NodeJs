@@ -1,0 +1,136 @@
+body {
+    margin-left: 10px;
+}
+
+.navbar {
+    /* background-color: rgb(145, 219, 176); */
+    background-color: #4863A0;
+    margin-left: -10px;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    margin-left: 40%;
+}
+
+.navbar-brand:hover{
+    color: white;
+}
+
+.text {
+    margin-left: 45%;
+    margin-top: 60px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    font-size: 25px;
+}
+
+.btn {
+    margin-right: 30px;
+    font-weight: bold;
+
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+.optionDiv {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionDiv button {
+    margin: 0px 100px;
+}
+
+.login {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teachForm {
+    padding: 60px 40px;
+    border-radius: 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.teachForm input {
+    width: 300px;
+}
+
+.tableDiv {
+    margin: 10px 200px;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+.table {
+    text-align: center;
+}
+
+.addStudent {
+    border-width: 2px;
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin: 0 300px;
+}
+
+.stuTable {
+    border-width: 2px;
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin: 0px 200px;
+    margin-bottom: 50px;
+}
+
+.card{
+    margin:0 auto;
+    float: none;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 300px;
+}
+
+span{
+    color: #678bdd;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content-not-found {
+    font-size: 20px;
+    color: red;
+    margin-top: 20px;
+    margin-left: 10px;
+}

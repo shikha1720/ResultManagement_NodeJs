@@ -1,0 +1,32 @@
+<a href="/teacher/viewAll" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4>Editing Form for Student : <%= user.name %>
+</h4>
+<form method="POST" class="addStudent" autocomplete="off">
+  <div class="mb-3">
+    <label for="roll_no" class="form-label">Roll No. : </label>
+    <input type="number" name="roll_no" value="<%= user.roll_no %>" readonly class="form-control" id="roll_no">
+  </div>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Name : </label>
+    <input type="text" minlength=2 maxlength=50 name="name" required class="form-control" required value="<%= user.name %>" id="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="date_of_birth" class="form-label">Date of Birth : </label>
+    <input type="date" name="date_of_birth" value="<%= user.date_of_birth %>" required class="form-control"
+      id="date_of_birth" max="">
+  </div>
+
+  <div class="mb-3">
+    <label for="score" class="form-label">Score : </label>
+    <input type="number" min=0 max=100 name="score" value="<%= user.score %>" required class="form-control" id="score">
+  </div>
+  <button type="submit" class="btn btn-success">Update</button>
+</form>
+
+<!-- for disabling future dates-->
+<script>
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementById("date_of_birth").setAttribute("max",today);
+</script>

@@ -1,0 +1,26 @@
+<a href="/" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h2>Teacher Login</h2>
+<div class="login">
+  <form method="POST" class="teachForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email : </label>
+      <input type="email" name="email" required class="form-control" id="email">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password : </label>
+      <input type="password" name="password" required class="form-control" id="password">
+    </div>
+    <a><button type="submit" class="btn btn-success">Submit</button></a>
+    <button type="reset" class="btn btn-danger">Clear</button>
+  </form>
+</div>
+
+<!-- for alert popup-->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script>
+  const messages = '<%= message %>';
+  if (messages == "Invalid Username or Password") {
+    alertify.set('notifier', 'position', 'bottom-center')
+    alertify.error(messages);
+  }
+</script>

@@ -1,0 +1,24 @@
+<a href="/" class="btn btn-warning" style="margin-top:5px;">Logout</a>
+<div class="row align-items-center">
+  <div class="card">
+    <h1 class="text-center m-3">My Result</h1>
+    <div class="card-body">
+      <div class="student text-center">
+        <p><span>Roll Number : </span><%= one.roll_no %></p>
+        <p><span>Name :</span> <%= one.name %></p>
+        <p><span>Date of Birth :</span> <%= one.date_of_birth %></p>
+        <p><span>Score :</span> <%= one.score %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- for alert popup-->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  <script>
+      const messages = '<%= message %>';
+      if (messages == "Student LogedIn Successfully.") {
+          alertify.set('notifier', 'position', 'bottom-center')
+          alertify.success(messages);
+      }
+  </script>

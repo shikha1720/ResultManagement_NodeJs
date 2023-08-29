@@ -1,0 +1,57 @@
+<a href="/teacher/options" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4>All Students</h4>
+<div class="tableDiv">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Roll No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Score</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% student.forEach(element=> { %>
+        <tr class="head">
+          <td>
+            <%= element.roll_no %>
+          </td>
+          <td>
+            <%= element.name %>
+          </td>
+          <td>
+            <%= element.date_of_birth %>
+          </td>
+          <td>
+            <%= element.score %>
+          </td>
+          <td>
+            <a href="/teacher/edit/<%= element.roll_no %> "><img style="margin: 0px 5px; height: 40px; width: 40px;"
+                src="https://img.icons8.com/color/edit" /></a>
+            <a href="/teacher/delete/<%= element.roll_no %> "><img style="margin: 0px 5px; height: 40px; width: 40px;"
+                src="https://img.icons8.com/color/delete" /></a>
+          </td>
+        </tr>
+        <%}) %>
+    </tbody>
+  </table>
+</div>
+
+<!-- for alert popup-->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script>
+    const messages = '<%= message %>';
+    if (messages == "Student Added Successfully.") {
+        alertify.set('notifier', 'position', 'bottom-center')
+        alertify.success(messages);
+    }
+    if (messages == "Student Deleted Successfully.") {
+        alertify.set('notifier', 'position', 'bottom-center')
+        alertify.success(messages);
+    }
+    if (messages == "Student Updated Successfully.") {
+        alertify.set('notifier', 'position', 'bottom-center')
+        alertify.success(messages);
+    }
+</script>

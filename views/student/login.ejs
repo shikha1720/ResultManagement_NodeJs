@@ -1,0 +1,25 @@
+<a href="/" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h2>Student Login</h2>
+<div class="login">
+  <form method="POST" class="teachForm">
+      <div class="mb-3">
+        <label for="roll_no" class="form-label">Roll no : </label>
+        <input type="number" min=1 required name="roll_no" class="form-control" id="roll_no">
+      </div>
+      <div class="mb-3">
+        <label for="date_of_birth" class="form-label">Date of Birth : </label>
+        <input type="date" name="date_of_birth" class="form-control" required id="date_of_birth">
+      </div>
+      <a class="link"><button type="submit" class="btn btn-success">Submit</button></a>
+      <button type="reset" class="btn btn-danger">Clear</button>
+  </form>
+
+  <!-- for alert popup-->
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  <script>
+      const messages = '<%= message %>';
+      if (messages == "Login with correct roll number and date of birth") {
+          alertify.set('notifier', 'position', 'bottom-center')
+          alertify.error(messages);
+      }
+  </script>
